@@ -1,0 +1,26 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://116hwmgycsc3"]
+
+[ext_resource type="StyleBox" uid="uid://ny2utyd6ffwr" path="res://Sets/Styles/grey.tres" id="1_rvykn"]
+[ext_resource type="StyleBox" uid="uid://ccbucyvm4icbf" path="res://Sets/Styles/green_hover.tres" id="2_iri42"]
+[ext_resource type="StyleBox" uid="uid://dklxv22ge8127" path="res://Sets/Styles/green.tres" id="3_w0u3m"]
+[ext_resource type="StyleBox" uid="uid://cw2nqlal1oveo" path="res://Sets/Styles/green_pressed.tres" id="4_omv0h"]
+[ext_resource type="StyleBox" uid="uid://87xkb1bjtf83" path="res://Sets/Styles/StatusBar/white.tres" id="5_iri42"]
+[ext_resource type="StyleBox" uid="uid://bgubbu3u8v2v8" path="res://Sets/Styles/StatusBar/green.tres" id="6_w0u3m"]
+
+[resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_disabled_color = Color(0.419814, 0.419813, 0.419813, 0.5)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/constants/h_separation = 4
+Button/font_sizes/font_size = 30
+Button/styles/disabled = ExtResource("1_rvykn")
+Button/styles/focus = ExtResource("2_iri42")
+Button/styles/hover = ExtResource("2_iri42")
+Button/styles/normal = ExtResource("3_w0u3m")
+Button/styles/pressed = ExtResource("4_omv0h")
+ProgressBar/styles/background = ExtResource("5_iri42")
+ProgressBar/styles/fill = ExtResource("6_w0u3m")

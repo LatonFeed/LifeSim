@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://2kkuqr6nqjhg"]
+
+[ext_resource type="PackedScene" uid="uid://tuirx36pfobj" path="res://Scenes/interactable_object.tscn" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://belj4gmgiaml7" path="res://icon.svg" id="2_h2yge"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="InteractableObject" parent="." instance=ExtResource("2_0xm2m")]
+z_index = 1000
+available_actions = Array[String](["Walk"])
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(64, -64)
+texture = ExtResource("2_h2yge")

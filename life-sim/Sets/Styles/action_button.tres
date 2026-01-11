@@ -1,0 +1,22 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://ceq1g2cajcggs"]
+
+[ext_resource type="StyleBox" uid="uid://ny2utyd6ffwr" path="res://Sets/Styles/grey.tres" id="1_apt8r"]
+[ext_resource type="StyleBox" uid="uid://ccbucyvm4icbf" path="res://Sets/Styles/green_hover.tres" id="2_5altw"]
+[ext_resource type="StyleBox" uid="uid://dklxv22ge8127" path="res://Sets/Styles/green.tres" id="3_swm6e"]
+[ext_resource type="StyleBox" uid="uid://cw2nqlal1oveo" path="res://Sets/Styles/green_pressed.tres" id="4_w1nut"]
+
+[resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_disabled_color = Color(0.419814, 0.419813, 0.419813, 0.5)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/constants/h_separation = 4
+Button/font_sizes/font_size = 30
+Button/styles/disabled = ExtResource("1_apt8r")
+Button/styles/focus = ExtResource("2_5altw")
+Button/styles/hover = ExtResource("2_5altw")
+Button/styles/normal = ExtResource("3_swm6e")
+Button/styles/pressed = ExtResource("4_w1nut")
