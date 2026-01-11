@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cibdtf7oer0ue"]
+
+[ext_resource type="Script" uid="uid://p6ap7wpcb106" path="res://Scenes/action_menu.gd" id="1_trwya"]
+
+[node name="ActionMenu" type="CanvasLayer"]
+script = ExtResource("1_trwya")
+
+[node name="MenuBackground" type="PanelContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ButtonList" type="VBoxContainer" parent="MenuBackground"]
+layout_mode = 2
