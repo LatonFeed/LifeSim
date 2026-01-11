@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://dx5rygnnes67c"]
+
+[ext_resource type="Texture2D" uid="uid://dpiudkn1y4v4y" path="res://Assets/Sprites/pixel.png" id="1_4flbx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4flbx"]
+size = Vector2(64, 64)
+
+[node name="Player" type="CharacterBody2D"]
+z_index = 3
+
+[node name="Pixel" type="Sprite2D" parent="."]
+modulate = Color(0.8729969, 0.7774387, 0.57497174, 1)
+position = Vector2(-1.9073486e-06, -224.00002)
+scale = Vector2(128, 448.00003)
+texture = ExtResource("1_4flbx")
+
+[node name="Pixel2" type="Sprite2D" parent="."]
+modulate = Color(0.8729969, 0.7774387, 0.57497174, 1)
+position = Vector2(64, -392)
+scale = Vector2(64, 80.00001)
+texture = ExtResource("1_4flbx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -64)
+shape = SubResource("RectangleShape2D_4flbx")
+
+[node name="right" type="RayCast2D" parent="."]
+position = Vector2(64, 0)
+target_position = Vector2(64, 0)
+hit_from_inside = true
+
+[node name="left" type="RayCast2D" parent="."]
+position = Vector2(-64, 0)
+target_position = Vector2(-64, 0)
+hit_from_inside = true

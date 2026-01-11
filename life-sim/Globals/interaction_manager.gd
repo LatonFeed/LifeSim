@@ -1,15 +1,11 @@
 extends Node
 
-# 1. LOAD THE MENU SCENE
-# This tells the manager where to find the UI scene you just built.
 const MENU_SCENE = preload("res://Scenes/action_menu.tscn")
 
 var clicked_objects: Array = []
 var active_menu = null
 
 func _ready():
-	# 2. CREATE THE MENU INSTANCE
-	# We create the menu immediately but keep it hidden (the menu script hides itself in _ready)
 	active_menu = MENU_SCENE.instantiate()
 	add_child(active_menu)
 
@@ -25,11 +21,8 @@ func _process_clicks():
 	for obj in clicked_objects:
 		all_actions.append_array(obj.available_actions)
 	
-	# 3. CALCULATE POSITION
-	# Get the mouse coordinates on the screen
 	var mouse_pos = get_viewport().get_mouse_position()
 	
-	# 4. SHOW THE MENU
 	if active_menu:
 		active_menu.show_menu(mouse_pos, all_actions)
 	

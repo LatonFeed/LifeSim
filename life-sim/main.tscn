@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://2kkuqr6nqjhg"]
+[gd_scene load_steps=6 format=3 uid="uid://2kkuqr6nqjhg"]
 
 [ext_resource type="PackedScene" uid="uid://bh1xov4mee3v1" path="res://fridge.tscn" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://ctdrsypkn3kbp" path="res://Locations/CheapMotel/room_3.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://cctecdgph2eis" path="res://door.tscn" id="2_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://c2jxxedgrx1b1" path="res://bed.tscn" id="3_lquwl"]
+[ext_resource type="PackedScene" uid="uid://dx5rygnnes67c" path="res://player.tscn" id="5_lquwl"]
 
 [node name="Main" type="Node2D"]
 
@@ -22,3 +23,6 @@ position = Vector2(-544, 352)
 position = Vector2(-800, 384)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Player" parent="." instance=ExtResource("5_lquwl")]
+position = Vector2(64, 384)
