@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+signal action_selected(action_name: String)
+
 @onready var menu_background = $MenuBackground
 @onready var button_list = $MenuBackground/ButtonList
 
@@ -19,19 +21,16 @@ func show_menu(screen_position: Vector2, actions: Array):
 	for action_name in actions:
 		var btn = Button.new()
 		btn.text = action_name
-		
 		btn.pressed.connect(_on_button_clicked.bind(action_name))
-		
 		button_list.add_child(btn)
 	
-	menu_background.size = Vector2.ZERO
-	
 	# 4 Show the menu
+	menu_background.size = Vector2.ZERO
 	menu_background.visible = true
 
 func _on_button_clicked(action_name):
-	print("Selected action: ", action_name)
-	menu_background.visible = false
+	action_selected.emit(action_name)
+	close_menu()
 
 func close_menu():
 	menu_background.visible = false

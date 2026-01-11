@@ -1,12 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://dx5rygnnes67c"]
+[gd_scene load_steps=4 format=3 uid="uid://dx5rygnnes67c"]
 
 [ext_resource type="Texture2D" uid="uid://dpiudkn1y4v4y" path="res://Assets/Sprites/pixel.png" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://bwk463wcqn2cm" path="res://player.gd" id="1_onrkg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4flbx"]
 size = Vector2(64, 64)
 
 [node name="Player" type="CharacterBody2D"]
-z_index = 3
+z_index = 4
+script = ExtResource("1_onrkg")
 
 [node name="Pixel" type="Sprite2D" parent="."]
 modulate = Color(0.8729969, 0.7774387, 0.57497174, 1)

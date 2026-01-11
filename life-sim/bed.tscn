@@ -7,7 +7,7 @@
 size = Vector2(640, 320)
 
 [node name="Bed" type="Node2D"]
-z_index = 100
+z_index = 3
 
 [node name="InteractableObject" parent="." instance=ExtResource("2_c32mu")]
 position = Vector2(-64, -96)
