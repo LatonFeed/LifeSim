@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://bh1xov4mee3v1"]
+
+[ext_resource type="PackedScene" uid="uid://tuirx36pfobj" path="res://Scenes/interactable_object.tscn" id="2_085p4"]
+[ext_resource type="Texture2D" uid="uid://dpiudkn1y4v4y" path="res://Assets/Sprites/pixel.png" id="2_qhilo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e6sfw"]
+size = Vector2(256, 288)
+
+[node name="Fridge" type="Node2D"]
+z_index = 100
+
+[node name="InteractableObject" parent="." instance=ExtResource("2_085p4")]
+available_actions = Array[String](["Eat"])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableObject"]
+position = Vector2(0, -80)
+shape = SubResource("RectangleShape2D_e6sfw")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+modulate = Color(0.27387, 0.415757, 0.691801, 1)
+position = Vector2(0, -72)
+scale = Vector2(128, 144)
+texture = ExtResource("2_qhilo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.832702, 1, 0.994355, 1)
+position = Vector2(0, -64)
+scale = Vector2(128, 128)
+texture = ExtResource("2_qhilo")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+modulate = Color(0.680127, 0.811516, 0.797116, 1)
+position = Vector2(-32, -128)
+scale = Vector2(56, 16)
+texture = ExtResource("2_qhilo")

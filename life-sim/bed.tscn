@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2jxxedgrx1b1"]
+
+[ext_resource type="PackedScene" uid="uid://tuirx36pfobj" path="res://Scenes/interactable_object.tscn" id="2_c32mu"]
+[ext_resource type="Texture2D" uid="uid://dpiudkn1y4v4y" path="res://Assets/Sprites/pixel.png" id="2_tjuac"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c32mu"]
+size = Vector2(640, 320)
+
+[node name="Bed" type="Node2D"]
+z_index = 100
+
+[node name="InteractableObject" parent="." instance=ExtResource("2_c32mu")]
+position = Vector2(-64, -96)
+available_actions = Array[String](["Sleep", "Relax"])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableObject"]
+position = Vector2(64, 0)
+shape = SubResource("RectangleShape2D_c32mu")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(0, -120)
+scale = Vector2(512, 16)
+texture = ExtResource("2_tjuac")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+modulate = Color(0.250665, 0.149557, 0.297526, 1)
+position = Vector2(0, -132)
+scale = Vector2(512, 24)
+texture = ExtResource("2_tjuac")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+modulate = Color(0.345898, 0.215126, 0.406635, 1)
+position = Vector2(0, -124)
+scale = Vector2(512, 8.00001)
+texture = ExtResource("2_tjuac")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+modulate = Color(0.849354, 0.848159, 0.837494, 1)
+position = Vector2(-184, -176)
+scale = Vector2(112, 16)
+texture = ExtResource("2_tjuac")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(-184, -152)
+scale = Vector2(112, 48)
+texture = ExtResource("2_tjuac")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.213764, 0.35502, 0.475528, 1)
+position = Vector2(0, -56)
+scale = Vector2(512, 112)
+texture = ExtResource("2_tjuac")
+
+[editable path="InteractableObject"]

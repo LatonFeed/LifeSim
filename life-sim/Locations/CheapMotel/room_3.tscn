@@ -1,7 +1,11 @@
-[gd_scene load_steps=6 format=4 uid="uid://ctdrsypkn3kbp"]
+[gd_scene load_steps=8 format=4 uid="uid://ctdrsypkn3kbp"]
 
+[ext_resource type="PackedScene" uid="uid://tuirx36pfobj" path="res://Scenes/interactable_object.tscn" id="1_2ywpp"]
 [ext_resource type="Texture2D" uid="uid://bseeda2ywx0bt" path="res://Assets/Sprites/Placeholder_tile_map.png" id="2_2ywpp"]
 [ext_resource type="TileSet" uid="uid://c6mowvi3bs6vl" path="res://Sets/placeholder_tile_set.tres" id="2_hmdjw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hmvaw"]
+size = Vector2(1728, 256)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hmvaw"]
 texture = ExtResource("2_2ywpp")
@@ -442,6 +446,14 @@ sources/0 = SubResource("TileSetAtlasSource_hmvaw")
 size = Vector2(2560, 2048)
 
 [node name="Level" type="Area2D"]
+
+[node name="InteractableObject" parent="." instance=ExtResource("1_2ywpp")]
+available_actions = Array[String](["Walk"])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableObject"]
+z_index = 1000
+position = Vector2(0, 352)
+shape = SubResource("RectangleShape2D_hmvaw")
 
 [node name="Tiles" type="Node2D" parent="."]
 

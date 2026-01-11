@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://cctecdgph2eis"]
+
+[ext_resource type="Texture2D" uid="uid://dpiudkn1y4v4y" path="res://Assets/Sprites/pixel.png" id="1_rte38"]
+[ext_resource type="PackedScene" uid="uid://tuirx36pfobj" path="res://Scenes/interactable_object.tscn" id="2_v6xrn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v6xrn"]
+size = Vector2(192, 736)
+
+[node name="Door" type="Node2D"]
+z_index = 100
+
+[node name="InteractableObject" parent="." instance=ExtResource("2_v6xrn")]
+position = Vector2(-64, -32)
+available_actions = Array[String](["Use Door", "Lock"])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableObject"]
+position = Vector2(64, -272)
+shape = SubResource("RectangleShape2D_v6xrn")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+modulate = Color(0.34445, 0.223684, 0.0513071, 1)
+position = Vector2(0, -304)
+scale = Vector2(64, 608)
+texture = ExtResource("1_rte38")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+modulate = Color(0.680127, 0.811516, 0.797116, 1)
+position = Vector2(32, -288)
+scale = Vector2(16, 16)
+texture = ExtResource("1_rte38")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+modulate = Color(0.680127, 0.811516, 0.797116, 1)
+position = Vector2(-32, -288)
+scale = Vector2(16, 16)
+texture = ExtResource("1_rte38")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.459277, 0.303875, 0.082191, 1)
+position = Vector2(0, -288)
+scale = Vector2(64, 576)
+texture = ExtResource("1_rte38")
+
+[editable path="InteractableObject"]
