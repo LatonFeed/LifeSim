@@ -12,6 +12,7 @@ func show_menu(screen_position: Vector2, actions: Array):
 	
 	# 2 Clear previous
 	for child in button_list.get_children():
+		button_list.remove_child(child)
 		child.queue_free()
 		
 	# 3 Create a new button for each action
@@ -22,6 +23,8 @@ func show_menu(screen_position: Vector2, actions: Array):
 		btn.pressed.connect(_on_button_clicked.bind(action_name))
 		
 		button_list.add_child(btn)
+	
+	menu_background.size = Vector2.ZERO
 	
 	# 4 Show the menu
 	menu_background.visible = true

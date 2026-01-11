@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://2kkuqr6nqjhg"]
+[gd_scene load_steps=5 format=3 uid="uid://2kkuqr6nqjhg"]
 
 [ext_resource type="PackedScene" uid="uid://tuirx36pfobj" path="res://Scenes/interactable_object.tscn" id="2_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://belj4gmgiaml7" path="res://icon.svg" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://bihpyd0m7w3gl" path="res://Scenes/interactable_object.gd" id="3_h2yge"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
+size = Vector2(448, 256)
 
 [node name="Main" type="Node2D"]
 
@@ -11,6 +15,21 @@
 z_index = 1000
 available_actions = Array[String](["Walk", "Sit", "Nothing"])
 
-[node name="Icon" type="Sprite2D" parent="."]
+[node name="Icon" type="Sprite2D" parent="InteractableObject"]
 position = Vector2(64, -64)
 texture = ExtResource("2_h2yge")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("3_h2yge")
+available_actions = Array[String](["Sleep", "Relax"])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-96, 0)
+shape = SubResource("RectangleShape2D_1bvp3")
+
+[node name="Icon2" type="Sprite2D" parent="Area2D"]
+position = Vector2(-96.00001, 0)
+scale = Vector2(3.5, 1)
+texture = ExtResource("2_h2yge")
+
+[connection signal="input_event" from="Area2D" to="Area2D" method="_on_input_event"]
