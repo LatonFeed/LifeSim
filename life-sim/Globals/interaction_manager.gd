@@ -31,7 +31,14 @@ func _process_clicks():
 	
 	# 4. SHOW THE MENU
 	if active_menu:
-		# We pass the position and the list of actions to the UI
 		active_menu.show_menu(mouse_pos, all_actions)
 	
 	clicked_objects.clear()
+
+# if clicked the empty space
+func _unhandled_input(event):
+	if event is InputEventMouseButton and event.pressed:
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			if active_menu and active_menu.menu_background.visible:
+				print("Closing menu via global click")
+				active_menu.close_menu()

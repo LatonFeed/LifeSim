@@ -9,7 +9,7 @@
 
 [node name="InteractableObject" parent="." instance=ExtResource("2_0xm2m")]
 z_index = 1000
-available_actions = Array[String](["Walk", "Sit"])
+available_actions = Array[String](["Walk", "Sit", "Nothing"])
 
 [node name="Icon" type="Sprite2D" parent="."]
 position = Vector2(64, -64)

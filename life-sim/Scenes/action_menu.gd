@@ -29,3 +29,6 @@ func show_menu(screen_position: Vector2, actions: Array):
 func _on_button_clicked(action_name):
 	print("Selected action: ", action_name)
 	menu_background.visible = false
+
+func close_menu():
+	menu_background.visible = false
