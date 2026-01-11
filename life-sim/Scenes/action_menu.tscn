@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cibdtf7oer0ue"]
+[gd_scene load_steps=3 format=3 uid="uid://cibdtf7oer0ue"]
 
 [ext_resource type="Script" uid="uid://p6ap7wpcb106" path="res://Scenes/action_menu.gd" id="1_trwya"]
+[ext_resource type="Theme" uid="uid://116hwmgycsc3" path="res://Sets/Styles/vertical_bar.tres" id="2_p3omo"]
 
 [node name="ActionMenu" type="CanvasLayer"]
 script = ExtResource("1_trwya")
@@ -11,3 +12,4 @@ offset_bottom = 40.0
 
 [node name="ButtonList" type="VBoxContainer" parent="MenuBackground"]
 layout_mode = 2
+theme = ExtResource("2_p3omo")
